@@ -1,0 +1,20 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="wrap-login100 p-t-50 p-b-30">
+    <div class="login100-form-avatar">
+        <img src="{% static 'images/placeholder.jpg' %}" alt="AVATAR">
+    </div>
+    
+    <span class="login100-form-title p-t-20 p-b-20">
+        Welcome, {{ user.username }}
+    </span>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
