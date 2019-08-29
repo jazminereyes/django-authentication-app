@@ -25,7 +25,7 @@ SECRET_KEY = 'usokb(3p@x$6_ez(tpr)=p%ul23974n6b!_cy!80!tdln$dk(('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
