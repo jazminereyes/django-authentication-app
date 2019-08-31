@@ -21,6 +21,9 @@ def register(request):
             user = authenticate(username=username, password=raw_password)
             login(request, user)
             return redirect('index')
+        else: 
+            error = "Your username must be 150 characters or fewer. Letters, digits and @/./+/-/_ only. Make sure that the password is not too similar to the username and must contain at least 8 characters."
+            return render(request, 'registration/register.html', {'form': form, 'error': error})
     else: 
         form = UserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
